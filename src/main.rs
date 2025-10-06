@@ -33,3 +33,32 @@ fn shadowing() {
     let name = 10;
     println!("{}", name);
 }
+
+// data type in rust in general divide into 2, scalar and compound
+// scalar represent a single value (int, float, boolean, char)
+// compunet represent a multi value (array, tuple)
+
+/* SCLAR */
+// integer
+// float decimal
+// boolean
+// char
+
+/* COMPOUND */
+// tuple a collecion data that can vary
+// array a collection data must be same
+
+/* RUST is a satic type */
+// but rust support explicit type
+// to set variable type use "<varname>: <type>"
+
+#[test]
+fn variable_explicit_implicit_type() {
+    // explicit variable type
+    let num_a = 10;
+    println!("{}", num_a);
+
+    // implicit variable type
+    let num_b: i8 = 10;
+    println!("{}", num_b)
+}
