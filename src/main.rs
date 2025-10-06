@@ -230,3 +230,15 @@ fn muttable_tuple() {
 
     println!("{:?}", a);
 }
+
+// in rust if function not return value defult return value is emty tuple only ()
+#[test]
+fn unit() {
+    println!("Heres is function not return anything!")
+}
+
+#[test]
+fn default_return_value_unit() {
+    let result = unit();
+    println!("{:?}", result)
+}
