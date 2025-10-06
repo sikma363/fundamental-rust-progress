@@ -96,3 +96,30 @@ fn conversion_integer_type() {
     let d: i8 = c as i8; // return 0 value
     println!("{}", d)
 }
+
+/* Operator Numeric */
+// + > sum
+// - > substraction
+// / > division
+// * > multiply
+// % > modulo
+
+#[test]
+fn numeric_operator() {
+    let a = 20;
+    let b = 10;
+    let c = a + b;
+    println!("{}", c);
+
+    let c = a - b;
+    println!("{}", c);
+
+    let c = a / b;
+    println!("{}", c);
+
+    let c = a * b;
+    println!("{}", c);
+
+    let c = a % b;
+    println!("{}", c);
+}
