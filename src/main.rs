@@ -138,3 +138,12 @@ fn augmented_assigment() {
 
 /* Booelan data type */
 // boolean use keyword "bool"
+
+#[test]
+fn boolean_data_type() {
+    let a = true;
+    let b: bool = false;
+
+    println!("{}", a);
+    println!("{}", b);
+}
