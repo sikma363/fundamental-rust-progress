@@ -294,3 +294,17 @@ fn constant_keyword() {
     const MAXIMUM: i32 = 100;
     println!("{} {}", MINIMUM, MAXIMUM)
 }
+
+/* Variable Scope */
+#[test]
+fn variable_scope() {
+    let a = "Bodro Adikoro";
+    println!("{}", a);
+
+    {
+        let b = 123123123;
+        println!("{}", b)
+    }
+
+    // println!("{}", b) // b cannot accible in here becasu outer of scope
+}
