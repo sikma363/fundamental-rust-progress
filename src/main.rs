@@ -23,3 +23,13 @@ fn variable_mutable() {
     name = "Sikma 363";
     println!("{}", name);
 }
+
+#[test]
+fn shadowing() {
+    //  shadowing rust create same variable name with let keyword
+    let name = "Bodro Adikror";
+    println!("{}", name);
+
+    let name = 10;
+    println!("{}", name);
+}
