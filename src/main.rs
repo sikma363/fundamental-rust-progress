@@ -164,3 +164,22 @@ fn comparation_operator() {
     let result = a > b;
     println!("{}", result)
 }
+
+/* Logical Operator */
+// Logical Operator return a boolean
+/*
+Operator    Name                Description                                Example (Result)
+--------------------------------------------------------------------------------------------
+&&          Logical AND         true if both operands are true             true && false => false
+||          Logical OR          true if at least one operand is true       true || false => true
+!           Logical NOT         inverts a boolean value                    !true => false
+*/
+#[test]
+fn logical_operator() {
+    // check if the price in budget checkout
+    let budget = 50;
+    let price = 30;
+
+    let checkout = price < budget;
+    println!("{}", checkout)
+}
