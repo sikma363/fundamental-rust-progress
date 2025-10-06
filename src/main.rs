@@ -123,3 +123,18 @@ fn numeric_operator() {
     let c = a % b;
     println!("{}", c);
 }
+
+#[test]
+fn augmented_assigment() {
+    // variable must be mutable if use augmanted assigment
+    let mut a = 20;
+
+    println!("{}", a);
+
+    a += 100;
+
+    println!("{}", a);
+}
+
+/* Booelan data type */
+// boolean use keyword "bool"
