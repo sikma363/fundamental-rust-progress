@@ -193,3 +193,40 @@ fn char_data_type() {
 
     println!("{} {}", a, b)
 }
+
+/* COMPUND DATA TYPES */
+// tuple fixed collection that can vary, data cannot add or remove
+#[test]
+fn tuple_data_type() {
+    // create tuple of data author(its fake, trust me)
+    let a = ("Bodro Adikoro", 30, "Gaming");
+    println!("{:?}", a);
+
+    // accesing tuple data, get author name, age, and hobby
+    println!("name: {}", a.0);
+    println!("age: {}", a.1);
+    println!("hobby: {}", a.2)
+}
+
+#[test]
+fn destructuring_tuple() {
+    let a = ("Bodro Adikoro", 30, "Gaming");
+    println!("{:?}", a);
+
+    // if data unused use "_"
+    let (name, age, hobby) = a;
+    println!("{} {} {}", name, age, hobby)
+}
+
+#[test]
+fn muttable_tuple() {
+    // to modify tuple data
+    // Default tuple is immutable to make mutable use keyword "mut"
+    let mut a = ("Bodro Adikoro", 30, "Gaming");
+    println!("{:?}", a);
+
+    // Chage hobby from Gaming to Code
+    a.2 = "Code";
+
+    println!("{:?}", a);
+}
