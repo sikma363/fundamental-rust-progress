@@ -183,3 +183,13 @@ fn logical_operator() {
     let checkout = price < budget;
     println!("{}", checkout)
 }
+
+// Char data type
+// Rust have a data type char use single qutoe -> 'A'
+#[test]
+fn char_data_type() {
+    let a = 'A';
+    let b = 'b';
+
+    println!("{} {}", a, b)
+}
