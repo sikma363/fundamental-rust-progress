@@ -13,3 +13,13 @@ fn variable() {
     let name = "Bodro Adikror";
     println!("{}", name)
 }
+
+#[test]
+fn variable_mutable() {
+    // to create muttable varibale use keyword "mut"
+    let mut name = "Bodro Adikror";
+    println!("{}", name);
+
+    name = "Sikma 363";
+    println!("{}", name);
+}
