@@ -242,3 +242,44 @@ fn default_return_value_unit() {
     let result = unit();
     println!("{:?}", result)
 }
+
+/* Array data type */
+// array is a collection fiexed data and value must be same
+#[test]
+fn array_data_type() {
+    // length is fixed
+    let a: [i32; 4] = [10, 20, 30, 40];
+    println!("{:?}", a);
+
+    // accesing array use index of array from "0"
+    let b = a[2];
+    println!("{}", b) // result 30
+}
+
+#[test]
+fn muttable_array() {
+    // to modify data array
+    // defult array is immutable use "mut" keyword to make it muttable
+    let mut a: [i32; 4] = [10, 20, 30, 40];
+    println!("{:?}", a);
+
+    a[0] = 100;
+    a[3] = 400;
+    println!("{:?}", a);
+
+    // get array length
+    let length = a.len();
+    println!("{}", length)
+}
+
+#[test]
+fn dimensional_array() {
+    let matrix: [[i32; 2]; 2] = [[10, 20], [40, 60]];
+    println!("{:?}", matrix);
+
+    // accesnig array
+    let a = matrix[1];
+    let b = matrix[1][0];
+    println!("{:?}", a);
+    println!("{:?}", b);
+}
