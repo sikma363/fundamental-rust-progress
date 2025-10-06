@@ -147,3 +147,20 @@ fn boolean_data_type() {
     println!("{}", a);
     println!("{}", b);
 }
+
+/* Comparation Operator */
+// Compraeation operator return booela value
+// ">" more than
+// "<"  less than
+// "==" same value
+// ">=" more than equal
+// "<=" more than equal
+
+#[test]
+fn comparation_operator() {
+    let a = 10;
+    let b = 20;
+
+    let result = a > b;
+    println!("{}", result)
+}
