@@ -287,12 +287,11 @@ fn dimensional_array() {
 // const keyword
 // const a keyword to create fixed value implicit type and data must be initialize
 // write const variable recomendation from rust use uppercase
-const MINIMUM: i32 = 100;
 
 #[test]
 fn constant_keyword() {
     const MAXIMUM: i32 = 100;
-    println!("{} {}", MINIMUM, MAXIMUM)
+    println!("{}", MAXIMUM)
 }
 
 /* Variable Scope */
