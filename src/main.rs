@@ -307,3 +307,36 @@ fn variable_scope() {
 
     // println!("{}", b) // b cannot accible in here becasu outer of scope
 }
+
+// Garbage Collection
+// memory management watch unused data and remove it
+// Other Language Program use it like java, golang, etc.
+// rust not use Garbage Collection for memory management
+// some lang not use Garbage Collection but memory management allocation memory is manual
+// like C/C++
+// but rust uses a different approach for memory management
+// rust devide data into two parts STACK and HEAP
+// if the data Fixed Size like Integer, Array, etc
+// the data stored on stack
+// if data size can be change heres contect change size is data type not mutable data,
+// like string, it stored on heap
+
+#[test]
+fn stack_heap() {
+    function_a();
+    function_b();
+}
+
+fn function_a() {
+    let front_name = String::from("Bodro"); // stored on heap
+    let age = 19; // stored on stack
+
+    println!("{}, {}", front_name, age);
+}
+
+fn function_b() {
+    let last_name = String::from("Adikoro"); // stored on heap
+    let status = "Employe"; // stored on stack
+
+    println!("{}, {}", last_name, status);
+}
