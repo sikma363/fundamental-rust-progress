@@ -364,3 +364,14 @@ fn string_slice_datatype() {
     username = "sikma363";
     println!("Usernma changed: {}", username)
 }
+
+// Strign Data type
+// data can cheage size, stored on heap
+#[test]
+fn string_datatype() {
+    // Variabe Mus met have mut if want to chage data but data still on heap if not have keyword
+    // mut
+    let mut name: String = String::from("Bodro");
+    name.push_str("Adikoro");
+    println!("{}", name)
+}
