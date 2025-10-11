@@ -340,3 +340,27 @@ fn function_b() {
 
     println!("{}, {}", last_name, status);
 }
+
+// String Data Types
+// rust have two text type
+// &str (string slice) fixed string, stored on stack
+// String can chage size, stored on heap
+//
+// string slice concept
+// if create mutable &str rust chage content but old is exisit lie
+// must be aware some string slice method can ber return String
+//
+
+#[test]
+fn string_slice_datatype() {
+    let name: &str = "Bodro";
+    let len_name = name.len();
+
+    println!("Name: {}", name);
+    println!("len_name: {}", len_name);
+
+    let mut username: &str = "bodrooo_"; // username bodrooo_ exisistn in memory only chage content
+    // variabe
+    username = "sikma363";
+    println!("Usernma changed: {}", username)
+}
