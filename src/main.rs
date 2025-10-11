@@ -456,3 +456,33 @@ fn if_expression() {
 
     println!("{}", value)
 }
+
+//loop expresion
+#[test]
+fn loop_expression() {
+    let mut counter = 0;
+
+    loop {
+        counter += 1;
+
+        if counter >= 10 {
+            break;
+        } else {
+            println!("{counter}");
+            continue;
+        }
+    }
+
+    // same as if loop  can be combine with variable
+
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+
+        if counter > 10 {
+            break counter;
+        };
+    };
+
+    println!("{}", result)
+}
