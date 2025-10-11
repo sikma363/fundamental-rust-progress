@@ -375,3 +375,24 @@ fn string_datatype() {
     name.push_str("Adikoro");
     println!("{}", name)
 }
+
+// Ownership Rule
+// each variable in rust mut be have a owner
+// and the variable must be one owner
+// cannot multi owner
+#[test]
+fn ownership_rule() {
+    // varilabe connot acces form here, because it ot has declared
+    let a = 10; //declare the variable
+    println!("{}", a); // variable "a" acesible form here
+
+    {
+        // variable scope
+        println!("variable a: {}", a); // variable a acesible form here
+        let b = 21;
+
+        println!("{}", b); // variable a acesible form here
+    } // varialbe "b" removed e from here because end of scope
+
+    println!("variable a from end {}", a); // variable "a" acesible beacue, inner of scope
+} // varialbe "a" removed e from here because end of scope
