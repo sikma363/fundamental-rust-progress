@@ -396,3 +396,13 @@ fn ownership_rule() {
 
     println!("variable a from end {}", a); // variable "a" acesible beacue, inner of scope
 } // varialbe "a" removed e from here because end of scope
+
+// data copy
+// if data fixed size data automaticly clone
+#[test]
+fn data_copy() {
+    let a = 100;
+    let b = a;
+    println!("{}", a);
+    println!("{}", b);
+}
