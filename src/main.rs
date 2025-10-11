@@ -430,3 +430,29 @@ fn data_clone() {
     println!("{}", clone_username);
     println!("{}", username);
 }
+
+// if expresion
+// like other progrramming language
+#[test]
+fn if_expression() {
+    let value = 7;
+
+    if value >= 7 {
+        println!("Good boy");
+    } else if value >= 5 {
+        println!("need More hard work!");
+    } else {
+        println!("week")
+    }
+
+    // rust have uniq implmmentasion if, let make if expesion on variable
+    let value: &str = if value >= 7 {
+        "Good Boy"
+    } else if value >= 5 {
+        "Need more Hard Work"
+    } else {
+        "Week"
+    };
+
+    println!("{}", value)
+}
