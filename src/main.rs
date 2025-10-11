@@ -417,3 +417,16 @@ fn ownership_movement() {
     println!("{}", clone_username);
     // println!("{}", username); // username not acceible because, ownership move to clone_username
 }
+
+// data  clone
+// every data sotred in heap have method .clone()
+
+#[test]
+fn data_clone() {
+    let username: String = String::from("bodrooo_");
+    // add clone method
+    let clone_username = username.clone();
+
+    println!("{}", clone_username);
+    println!("{}", username);
+}
