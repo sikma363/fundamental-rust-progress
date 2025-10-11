@@ -406,3 +406,14 @@ fn data_copy() {
     println!("{}", a);
     println!("{}", b);
 }
+
+// ownwrship movement
+// in rust at same time varibale only have one owner
+#[test]
+fn ownership_movement() {
+    let username: String = String::from("bodrooo_");
+    let clone_username = username;
+
+    println!("{}", clone_username);
+    // println!("{}", username); // username not acceible because, ownership move to clone_username
+}
