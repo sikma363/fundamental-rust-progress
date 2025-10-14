@@ -581,3 +581,29 @@ fn function() {
     println!("Factorial a: {}", factorial_a);
     println!("Factorial b: {}", factorial_b);
 }
+
+//rust recurusve function
+//Functions in Rust can call themselves.
+fn hello_recirsive(name: String, times: u32) {
+    if times <= 1 {
+        return;
+    } else {
+        println!("Ho, {}", name)
+    }
+
+    hello_recirsive(name, times - 1);
+}
+
+fn factorial_recursive(n: u32) -> u32 {
+    if n <= 1 {
+        return 1;
+    }
+
+    n * factorial_recursive(n - 1)
+}
+
+#[test]
+fn recursive_function() {
+    hello_recirsive(String::from("SIkma363"), 5);
+    println!("Factorial Recursive: {}", factorial_recursive(10))
+}
