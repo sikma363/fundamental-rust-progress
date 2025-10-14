@@ -607,3 +607,36 @@ fn recursive_function() {
     hello_recirsive(String::from("SIkma363"), 5);
     println!("Factorial Recursive: {}", factorial_recursive(10))
 }
+
+// ownership and function
+// in rust if data stored on stack data automaticyly clone
+// if data sotred on heap data ownershipp chage to function
+fn print_number(n: i32) {
+    println!("Number: {n}")
+}
+
+fn print_hello(name: String) {
+    println!("Hi Ho, {name}")
+}
+
+fn full_name(first: String, last: String) -> String {
+    format!("{} {}", first, last)
+}
+
+#[test]
+fn ownership_and_function() {
+    let number = 1000;
+    print_number(number); // number is fixed size stored on  stack
+
+    let name: String = String::from("Sikma363");
+    print_hello(name);
+    // println!("{name}") // variable name is not valid because ownership moved to function
+    // print_hello and removed after print_hello end
+    let first_name = String::from("SIkma");
+    let last_name = String::from("Sikibidi");
+
+    let name = full_name(first_name, last_name); // now first and last name owner is name varable
+    println!("{name}");
+    // println!("{}", first_name); first name and last name is nt accesible
+    // println!("{}", last_name); because owner is changed
+}
