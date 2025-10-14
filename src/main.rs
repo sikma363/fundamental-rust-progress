@@ -513,3 +513,30 @@ fn array_iteration() {
         println!("Character: {}", char);
     }
 }
+
+// rust have a rage data type
+// rege data type is a data collection like array
+// it's itrable
+// rage data begin from start and end befored end (exclusive)
+// range data inclusive
+// to make rage incluse use =
+// like 0..=5
+#[test]
+fn rage_datatype() {
+    let range = 1..5;
+    println!("Start: {}", range.start);
+    println!("End: {}", range.end); // output is 5 but if iterate the rage return 4
+
+    for i in range {
+        println!("{}", i)
+    } // end of range is 4 because it exclusive
+
+    // to make inclusive rage use =
+    let range = 1..=5;
+    println!("Start: {}", range.start());
+    println!("End: {}", range.end()); // output is 5 but if iterate the rage return 4
+
+    for i in range {
+        println!("{}", i)
+    } // end of range is 5 because it inclusive
+}
