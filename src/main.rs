@@ -360,7 +360,7 @@ fn string_slice_datatype() {
     println!("len_name: {}", len_name);
 
     let mut username: &str = "bodrooo_"; // username bodrooo_ exisistn in memory only chage content
-                                         // variabe
+    // variabe
     username = "sikma363";
     println!("Usernma changed: {}", username)
 }
@@ -623,6 +623,11 @@ fn full_name(first: String, last: String) -> String {
     format!("{} {}", first, last)
 }
 
+fn full_name_rolback(first: String, last: String) -> (String, String, String) {
+    let full = format!("{} {}", first, last);
+    (first, last, full)
+}
+
 #[test]
 fn ownership_and_function() {
     let number = 1000;
@@ -639,4 +644,10 @@ fn ownership_and_function() {
     println!("{name}");
     // println!("{}", first_name); first name and last name is nt accesible
     // println!("{}", last_name); because owner is changed
+
+    // to make first and last name acciisble again we can return the paramernt in fnuction like
+    let first_name = String::from("SIkma");
+    let last_name = String::from("Sikibidi");
+    let (first, last, full) = full_name_rolback(first_name, last_name);
+    println!("{first}, {last}, {full}")
 }
