@@ -360,7 +360,7 @@ fn string_slice_datatype() {
     println!("len_name: {}", len_name);
 
     let mut username: &str = "bodrooo_"; // username bodrooo_ exisistn in memory only chage content
-    // variabe
+                                         // variabe
     username = "sikma363";
     println!("Usernma changed: {}", username)
 }
@@ -485,4 +485,14 @@ fn loop_expression() {
     };
 
     println!("{}", result)
+}
+
+#[test]
+fn while_loop() {
+    let mut counter = 0;
+
+    while counter <= 10 {
+        println!("Counter: {}", counter);
+        counter += 1;
+    }
 }
