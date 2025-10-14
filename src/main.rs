@@ -496,3 +496,20 @@ fn while_loop() {
         counter += 1;
     }
 }
+
+#[test]
+fn array_iteration() {
+    // manual method use while loop
+    let mut counter = 0;
+    let chars: [char; 5] = ['A', 'B', 'C', 'D', 'E'];
+
+    while counter < chars.len() {
+        println!("Character: {}", chars[counter]);
+        counter += 1;
+    }
+
+    // using for loop
+    for char in chars {
+        println!("Character: {}", char);
+    }
+}
