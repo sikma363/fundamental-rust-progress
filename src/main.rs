@@ -540,3 +540,44 @@ fn rage_datatype() {
         println!("{}", i)
     } // end of range is 5 because it inclusive
 }
+
+// rust function
+fn hello() {
+    println!("Hello.")
+}
+
+///rust fuction with parameter
+fn say_hello(name: &str) {
+    println!("Hi, {}", name)
+}
+
+fn factorial_loop(n: i32) -> i32 {
+    if n <= 0 {
+        return 0;
+    }
+
+    let mut result = 1;
+    for i in 1..=n {
+        result *= i;
+    }
+
+    result
+}
+
+#[test]
+fn function() {
+    // function withour parameter
+    hello();
+    hello();
+    hello();
+
+    //function with paramter
+    say_hello("Bodro");
+    say_hello("Sikma363");
+
+    let factorial_a = factorial_loop(10);
+    let factorial_b = factorial_loop(-10);
+
+    println!("Factorial a: {}", factorial_a);
+    println!("Factorial b: {}", factorial_b);
+}
